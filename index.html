@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css" type="text/css" />
+        <title> </title>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Dashboard Demo</a></li>
+                <li><a href="#">Form Captures</a></li>
+                <li><a href="#">Forms</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Administration</a></li>
+            </ul>
+        </div>
+        <div class="dashboard">
+            <div class="first">
+                <h2 style="float:left">Dashboard</h2>
+                <h5 style="float:left">statistics and reports</h5>
+                <div class="buttons" style="clear:left;">
+                    <button>SEVAN DASHBOARD</button>
+                    <button>SEVAN DASHBOARD</button>
+                </div>
+            </div>
+            <div class="second">
+                <h1 style="margin-bottom:10px;">Sevan Dashboard</h1>
+                <div class="tables1">
+                    <div class="synchronized">
+                       <h1>Synchronized</h1>
+                       <p>21</p>
+                    </div>
+                    <div class="incomplete">
+                       <h1>Incomplete</h1>
+                       <p>34</p>
+                    </div>
+                    <div class="validated">
+                       <h1>Validated</h1>
+                       <p>272</p>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+                 <script type="text/javascript">
+                 $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=range.json&callback=?', function (data) {
+
+    Highcharts.stockChart('container', {
+
+        chart: {
+            type: 'columnrange'
+        },
+
+        rangeSelector: {
+            selected: 2
+        },
+
+        title: {
+            text: 'Temperature variation by day'
+        },
+
+        tooltip: {
+            valueSuffix: '°C'
+        },
+
+        series: [{
+            name: 'Temperatures',
+            data: data
+        }]
+
+    });
+});
+</script>
+            </div>
+        </div>
+    </body>
+</html>
