@@ -48,11 +48,16 @@ a, a:hover {text-decoration: none}
     text-align: left;
 }
 .nav li a:hover {
+    border-left: 3px solid #940000;
     background-color: #555;
     color: white;
 }
 .nav li a:active {
     background-color: rgb(53,53,53);
+    color: white;
+}
+.nav li a::selection {
+     background-color: #555;
     color: white;
 }
 
@@ -67,7 +72,7 @@ a, a:hover {text-decoration: none}
     text-align: left;
 }
 button {
-    background-color: rgb(148,0,0); 
+    background-color: #940000 ; 
     border: none;
     color: white;
     padding: 10px 16px;
@@ -91,11 +96,10 @@ button:active {
 
 .second {
     margin-top: 30px;
-    
 }
 .synchronized {
     padding: 10px;
-    width: 360px;
+    width: 355px;
     height: 150px;
     background-color: white;
     float: left;
@@ -104,7 +108,7 @@ button:active {
 }
 .incomplete {
     padding: 10px;
-    width: 360px;
+    width: 355px;
     height: 150px;
     background-color: white;
     float: left;
@@ -112,7 +116,7 @@ button:active {
 }
 .validated {
     padding: 10px;
-    width: 360px;
+    width: 355px;
     height: 150px;
     background-color: white;
     float: left;
@@ -130,6 +134,57 @@ button:active {
 }
 
 
+
+#chartdiv {
+	width: 100%;
+	height: 375px;
+	margin-bottom: 150px;
+}
+
+.chart {
+    width: 1055px;
+    height: 717px;
+    background-color: white;
+    clear: left;
+    margin-left: 17%;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+.chart1 {
+    margin-right: 10px;
+    padding: 15px;
+    width: 470px;
+    height: 415px;
+    border: 1px solid grey;
+}
+
+#chartdiv1 {
+  width: 429px;
+  height: 375px;
+}	
+.chart2 {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 15px;
+    width: 470px;
+    border: 1px solid grey;
+    height: 240px;
+}
+
+
+#chartdiv2 {
+  width: 449px;
+  height: 200px;
+}
+
+.chart3 {
+    padding: 15px;
+    width: 530px;
+    height: 675px;
+    margin-left: 487px;
+    border: 1px solid grey;
+    margin-top: -675px;
+}
 
 
 

@@ -3,12 +3,25 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css" />
+        <!-- Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
+        
+        
+        
+
+
+
+
         <title> </title>
     </head>
     <body>
         <div class="nav">
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
                 <li><a href="#">Dashboard Demo</a></li>
                 <li><a href="#">Form Captures</a></li>
                 <li><a href="#">Forms</a></li>
@@ -17,7 +30,7 @@
                 <li><a href="#">Administration</a></li>
             </ul>
         </div>
-        <div class="dashboard">
+        <div class="dashboard" id="dashboard">
             <div class="first">
                 <h2 style="float:left">Dashboard</h2>
                 <h5 style="float:left">statistics and reports</h5>
@@ -42,43 +55,28 @@
                        <p>272</p>
                     </div>
                 </div>
-                <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/stock/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-                 <script type="text/javascript">
-                 $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=range.json&callback=?', function (data) {
-
-    Highcharts.stockChart('container', {
-
-        chart: {
-            type: 'columnrange'
-        },
-
-        rangeSelector: {
-            selected: 2
-        },
-
-        title: {
-            text: 'Temperature variation by day'
-        },
-
-        tooltip: {
-            valueSuffix: '°C'
-        },
-
-        series: [{
-            name: 'Temperatures',
-            data: data
-        }]
-
-    });
-});
-</script>
             </div>
+            <div id="chartdiv"></div>
         </div>
+        <div class="chart">
+            <div class="chart1">
+                <h2>CAPTURES BY STATUS</h2>
+                <div id="chartdiv1"></div>
+            </div>
+            <div class="chart2">
+                <h2>CAPTURES BY USER</h2>
+                <div id="chartdiv2"></div>
+            </div>
+            <div class="chart3">
+                <h2>CAPTURES BY SUBMITTED</h2>
+                
+            </div>
+            
+        </div>
+        
+        
+        
+ 
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
